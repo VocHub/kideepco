@@ -1,0 +1,1316 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: none;
+  max-width: 100%;
+  font-size: 1.3rem;
+  background-color: #d2edfc;
+  /* background: linear-gradient(10deg, #9774c3, #ff9f9f); */
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: (--scroll-padding, 100px);
+}
+
+
+/* Background audio pause and play btn */
+.fa-circle-play{
+  cursor: pointer;
+  color: #605959;
+  padding-left: 1rem;
+  position: fixed;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.fa-circle-playAudio{
+  opacity: 0.90;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  font-size: small;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 6px;
+  left: 117%;
+  padding: 1rem;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+.fa-circle-play:hover .tooltiptext {
+  visibility: visible;
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+  width: 0.7em;
+}
+::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+}
+
+/* home page */
+
+.home-container {
+  width: 100vw;
+  /* height: 18vh; */
+  margin: 0 auto;
+}
+
+
+/* nav bar */
+.nav {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: white; */
+}
+
+.logo {
+  width: 4em;
+  margin: .3rem;
+  margin-left: 1.5rem; 
+}
+
+.nav__list{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.nav__link{
+  text-decoration: none;
+  color: #FF9F9F;
+  font-family: 'Carter One', cursive;
+  font-weight: bold;
+  padding-right: 2rem;
+  padding-bottom: inherit;
+  display: block;
+}
+
+.nav__link:hover {
+  opacity: 0.75;
+}
+
+.toggle-button{
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.toggle-button .bar{
+  width: 100%;
+  height: 3px; 
+  background-color: black;
+  border-radius: 10px;
+}
+
+
+/* hero-top */
+
+.hero {
+  background-color: #d2edfc;
+}
+
+.hero-top{
+  padding-bottom: 7em;
+}
+
+.hero-title {
+ margin-bottom: 0;
+}
+
+.hero-p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+/* activities section on home page */
+
+.activities-h2{
+  display: flex;
+  justify-content: flex-end;
+  font-family: caveat brush;
+  color: #fff;
+  font-size: 2em;
+  margin:inherit;
+}
+
+.activities-content{
+  background: #9774c3;
+  border-top: solid 5px #ffe070;
+  padding: 1em 3em 1em 3em;
+  font-family: 'Carter One', cursive;
+}
+
+.content-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.content-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-section{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.content-section p {
+  text-align: end;
+  width: 50%;
+  line-height: 2rem;
+  color: #fff;
+  padding: inherit;
+}
+
+
+.content-section > p{
+  text-align: end;
+  width: 50%;
+  line-height: 2.5rem;
+  color: #fff;
+  padding: inherit;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: larger;
+}
+
+.btn{
+  display: flex;
+  padding: 7px;
+  font-family: 'Carter One', cursive;
+  text-transform: uppercase;
+  background: #ff9f9f;
+  color: #fff;
+  font-size: medium;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background:#f99292;
+}
+
+/* mindfulness section on home page */
+
+.mindfulness-h2{
+  font-family: caveat brush;
+  color: #fff;
+  font-size: 2em;
+  margin:inherit;
+}
+
+.mindfulness-content{
+  background: #ff9f9f;
+  padding: 1em 3em 1em 3em;
+  border-top: solid 5px #ffe070;
+}
+
+.mindfulness-content-container{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.mindfulness-p{
+  flex-direction: column;
+  text-align: justify;
+}
+
+.mindfulness-p > p{
+  width: 50%;
+  line-height: 2.5rem;
+  color: #fff;
+  padding: inherit;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: larger;
+}
+
+.mindfulness-btn{
+  display: flex;
+  padding: 7px;
+  font-family: 'Carter One', cursive;
+  text-transform: uppercase;
+  background: #9774c3;;
+  color: #fff;
+  font-size: medium;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.mindfulness-btn:hover{
+  background: #8364a8;
+}
+
+/* tracker section on home page */
+
+/* .tracker-h2{
+  display: flex;
+  justify-content: flex-end;
+  font-family: caveat brush;
+  color: #fff;
+  font-size: 2em;
+  margin:inherit;
+}
+
+.tracker-content{
+  background: #9774c3;
+  border-top: solid 5px #ffe070;
+  padding:  1em 3em 1em 3em;
+} */
+
+.containerImg > img {
+  width: 80%;
+  margin: 8rem 5rem 5rem 5rem ;
+  max-height: 100%;
+  padding: auto;
+  box-shadow: 1px 1px 2rem rgb(0 0 0 / 30%);
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.hero-top{
+  display: flex;
+}
+
+.hero__text{
+  font-family: 'Carter One', cursive;
+  width: 50%;
+  margin: 8rem 0 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2em;
+}
+
+.hero h1 {
+  font-family: caveat brush;
+  margin-top: 0%;
+  font-size: 3em;
+}
+
+.hero-bottom img {
+  width: 13em;
+  height: 11em;
+}
+
+ /* activities page */
+
+.activities {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.activities-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 25rem;
+  padding-top: 2.5rem;
+  background: #d2edfc;
+}
+
+.headings-container {
+  display: flex;
+  padding: 3rem;
+  background: linear-gradient(10deg, #9774c3, #ff9f9f);
+  flex-direction: column;
+  align-items: center;
+  border: solid 0px white;
+  box-shadow: 1px 1px 2rem rgb(0 0 0 / 30%);
+  border-radius: 1rem;
+}
+
+.headings {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: white;
+  font-family: 'Carter One', cursive;
+  font-size: xx-large;
+}
+
+.activities-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #9774c3;
+  padding-top: 5rem;
+}
+
+span {
+  content: "\2192";
+  font-size: xxx-large;
+}
+
+.number {
+  height: 110px;
+  width: 110px;
+  background: linear-gradient(10deg, #9774c3, #ff9f9f);
+  box-shadow: 1px 1px 2rem rgb(0 0 0 / 30%);
+  border-radius: 100%;
+  position: absolute;
+  left: -10%;
+  top: -13%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scene {
+  width: 20rem;
+  height: 20rem;
+  margin: 3rem;
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.face {
+  position: absolute;
+  font-family: 'Carter One', cursive;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: #ff9f9f;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.back {
+  background-color: #ff9f9f;
+  transform: rotateY(180deg);
+  font-size: larger;
+  border-radius: 2rem;
+  line-height: 2.3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ul {
+  padding: 3rem;
+  font-size: large;
+  text-align: left;
+}
+
+.hydrated {
+  font-size: larger;
+  padding: 1rem;
+}
+
+.prompts-back {
+  line-height: 1.7rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.fa-solid {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: "Font Awesome 6 Free";
+  font-size: xx-large;
+}
+
+/* about page */
+
+.about-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #d3ecfc;
+}
+
+.about-header-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-header-content > p {
+  text-align: center;
+    padding: 0 8rem 1rem 8rem;
+    line-height: 3rem;
+    color: #9774c3;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+}
+
+.about-content {
+ width: 90%;
+ padding-left: 3em;
+}
+
+.about-title{
+  color: black;
+  display: flex;
+  margin: 0px auto;
+  padding-top: 2rem;
+  font-family: "caveat brush";
+  font-size: 3em;
+  justify-content: center;
+}
+
+.about_img{
+  max-width: fit-content;
+  max-height: 21rem;
+}
+
+.about-content-container{
+  display: flex;
+  justify-content: center;
+}
+
+.services{
+  background: linear-gradient(10deg, #9774c3, #ff9f9f);
+  padding-top: 2rem;
+}
+
+.services-container{
+  display: flex;
+  max-width: 100%;
+  padding-bottom: 2rem;
+}
+
+.services-title{
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  margin: auto;
+  font-family: 'Caveat Brush';
+  font-size: 3rem;
+  color: rgb(241, 213, 213);
+}
+
+.services-about{
+  display: flex;
+  margin: inherit;
+  padding-top: 2rem;
+  color: #fff;
+  align-items: center;
+  flex-direction: column;
+}
+
+.services-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;  
+  color: #fff;
+  font-family: 'Carter One', cursive;
+  font-size: larger;
+}
+
+.services-info > p{
+  text-align: center;
+}
+
+
+
+/* mindfulness page */
+.mindBody{
+  overflow:auto
+}
+
+.container__video{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 1rem 0.4rem;
+  background: #ff9f9f;
+}
+  
+.mindfulness-top{
+  font-family: 'Carter One', cursive;
+  background: linear-gradient(10deg, #9774c3, #ff9f9f);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  margin: 2rem 7rem 2rem 7rem;
+  padding: 0 2rem 0.5rem 3rem;
+}
+
+.mindfulness-h1{
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  /* text-decoration: underline; */
+  margin-bottom: 0.25rem;
+}
+.mindfulness-page-p{
+  line-height: 1.75rem;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.container__video .main-video{
+  border-radius: 5px;
+  padding: 10px;
+  background: #9774c3;
+}
+
+.container__video .main-video iframe{
+  width: 100%;
+  border: 5px;
+}
+
+.container__video .main-video .video-title{
+  color: black;
+  font-size: inherit;
+  font-family: 'Carter One', cursive;
+}
+
+.container__video .sidebar{
+  border-radius: 5px;
+  height: 41.4rem;
+  overflow-y: scroll;
+  background: #9774c3;
+}
+
+.container__video .sidebar::-webkit-scrollbar{
+  width: 7px;
+}
+
+.container__video .sidebar::-webkit-scrollbar-track{
+  border-radius: 50px;
+}
+
+.container__video .sidebar::-webkit-thumb{
+  border: 50px;
+}
+
+.container__video .sidebar .vid iframe{
+  width: 10rem;
+  border-radius: 5px;
+
+}
+
+.container__video .sidebar .vid{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.container__video .sidebar .vid:hover{
+  background: #ff9f9f;
+}
+
+.container__video .sidebar .vid.active{
+  background:#ff9f9f;
+}
+
+.container__video .sidebar .vid .video-title{
+  font-size: 17px;
+  font-family: 'Carter One', cursive;
+}
+
+/* mindfulness page breathing exercises slides */
+
+.breathing-exercises-section{
+  background: #9774c3;
+  padding-bottom: 4rem;
+}
+
+.breathing-exercises-header{
+  /* background: #9774c3; */
+  font-family:  'Carter One', cursive;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swiper {
+  width: 50rem;
+}
+
+
+.slide-img{
+  width: inherit;
+}
+
+
+/* ----------- iPhone 6, 6S, 7 and 8 -----------
+
+/* Portrait and Landscape */
+ @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .hero-top{
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;  
+    }
+
+    .hero h1 {
+      font-family: caveat brush;
+      padding: 1rem;
+      font-size: 3em;
+    }
+    .containerImg > img {
+      margin-top: 1rem;
+      width: 80%;
+      display: flex;
+      margin: auto;
+      padding: auto;
+      box-shadow: 1px 1px 2rem rgb(0 0 0 / 30%);
+    }
+
+    .hero__text {
+    width: 80%;
+    margin: 0 auto;
+    padding: unset;
+   }
+  
+
+    .activities-content{
+      background: #9774c3;
+      border-top: solid 5px #ffe070;
+      padding: 1rem;
+      display: block;
+    }
+
+    .content-container{
+      display: block;
+      align-items: center;
+    }
+
+    .content-section{
+      display: flex;
+      align-items: center;
+    }
+
+
+    .content-section > p {
+      text-align: center;
+      line-height: 3rem;
+      width: auto;
+      padding-bottom: 1rem;
+      color: #fff;
+      margin: auto;
+      font-family: 'Caveat Brush';
+      font-size: larger;
+    }
+
+    .hero-bottom img{
+      height: 11em;
+      display: block;
+      margin: auto;
+    }
+
+    .activities-h2{
+      display: flex;
+      justify-content: center;
+      font-family: caveat brush;
+      color: #fff;
+      font-size: 2em;
+      margin: inherit;
+    }
+
+    .mindfulness-content-container{
+      display: block;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+
+    .mindfulness-content{
+      background: #ff9f9f;
+      border-top: solid 5px #ffe070;
+      padding: 1rem;
+      display: block;
+    }
+
+    .mindfulness-h2{
+      display: flex;
+      justify-content: center;
+      font-family: caveat brush;
+      color: #fff;
+      font-size: 2em;
+      margin: inherit;
+    }
+
+    .mindfulness-p{
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mindfulness-p > p {
+      width: auto;
+      line-height: 3rem;
+      color: #fff;
+      font-family: 'Caveat Brush';
+      font-size: larger;
+    }
+
+    .tracker-h2{
+    display: flex;
+    justify-content: center;
+    font-family: caveat brush;
+    color: #fff;
+    font-size: 2em;
+    }
+
+/* activities page */
+
+.headings-container {
+  display: flex;
+  padding: 3rem;
+  background: linear-gradient(10deg, #9774c3, #ff9f9f);
+  flex-direction: column;
+  align-items: center;
+  border: solid 0px white;
+  box-shadow: 1px 1px 2rem rgb(0 0 0 / 30%);
+}
+
+.headings {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: white;
+  font-family: 'Carter One', cursive;
+  font-size: inherit;
+  text-align: center;
+}
+
+/* mindfulness page */
+.breathing-exercises-header{
+  font-size: small;
+  text-align: -webkit-center;
+}
+
+.mindfulness-top {
+  font-family: 'Carter One', cursive;
+  background: linear-gradient(10deg, #9774c3, #ff9f9f);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  margin: 2rem 1rem 2rem 1rem;
+  padding: 1rem;
+}
+
+.mindfulness-h1 {
+  margin-bottom: 0.25rem;
+  margin-top: auto;
+}
+
+.mindfulness-page-p {
+  text-align: center;
+  font-size: smaller;
+}
+
+
+.mindfulness-h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  text-decoration: underline;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swiper {
+  width: auto;
+}
+
+.slide-img {
+  width: inherit;
+}
+
+/* about page */
+
+.services-container{
+  flex-direction: column;
+}
+
+.services-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  width: fit-content;
+  color: #fff;
+  font-family: 'Carter One', cursive;
+  font-size: larger;
+}
+
+.services-info > h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: larger;
+}
+
+.services-info > p {
+  font-size: larger;
+}
+
+.about-header-content > p {
+  text-align: justify;
+  padding: 1rem;
+  color: #9774c3;
+  font-family: 'Carter One', cursive;
+  font-weight: 900;
+  font-size: large;
+  line-height: 2rem;
+  margin: 0 auto;
+}
+
+/* nav */
+
+.toggle-button{
+  display: flex;
+}
+
+.nav-links{
+  display: none;
+  width: 100%;
+}
+
+.nav {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.nav__list{
+  width: 100%;
+  flex-direction: column;
+}
+
+.nav__item{
+  font-size: 1rem;
+  text-align: center;
+}
+
+.nav__link{
+  padding: 0.5rem
+}
+
+.nav__item:hover{
+  background-color: #a3cbe8;
+}
+
+.nav-links.active{
+  display: flex;
+}
+
+
+
+  }
+
+
+  @media (max-width:991px) {
+    .container__video{
+      grid-template-columns: 1.5fr 2fr;
+      padding: 10px;
+    }
+  }
+
+  @media (max-width:768px) {
+    .container__video{
+      grid-template-columns: 1fr;
+    }
+  }
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape 
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}   */
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 850px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+
+    .hero-top{
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;  
+    }
+
+    .hero h1 {
+      font-family: caveat brush;
+      padding: 1rem;
+      font-size: 3em;
+    }
+    .containerImg > img {
+      margin-top: 1rem;
+      width: 80%;
+      display: flex;
+      margin: auto;
+      padding: auto;
+      box-shadow: 1px 1px 2rem rgb(0 0 0 / 30%);
+    }
+
+    .hero__text {
+    width: 80%;
+    margin: 0 auto;
+    padding: unset;
+   }
+  
+
+    .activities-content{
+      background: #9774c3;
+      border-top: solid 5px #ffe070;
+      padding: 1rem;
+      display: block;
+    }
+
+    .content-container{
+      display: block;
+      align-items: center;
+    }
+
+    .content-section{
+      display: flex;
+      align-items: center;
+    }
+
+    .content-section > p {
+      text-align: center;
+      line-height: 3rem;
+      width: auto;
+      padding-bottom: 1rem;
+      color: #fff;
+      margin: auto;
+      font-family: 'Caveat Brush';
+      font-size: larger;
+    }
+
+    .hero-bottom img{
+      height: 11em;
+      display: block;
+      margin: auto;
+    }
+
+    .activities-h2{
+      display: flex;
+      justify-content: center;
+      font-family: caveat brush;
+      color: #fff;
+      font-size: 2em;
+      margin: inherit;
+    }
+
+    .mindfulness-content-container{
+      display: block;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+
+    .mindfulness-content{
+      background: #ff9f9f;
+      border-top: solid 5px #ffe070;
+      padding: 1rem;
+      display: block;
+    }
+
+    .mindfulness-h2{
+      display: flex;
+      justify-content: center;
+      font-family: caveat brush;
+      color: #fff;
+      font-size: 2em;
+      margin: inherit;
+    }
+
+    .container__video {
+      margin: 1rem;
+    }
+
+    .mindfulness-p{
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mindfulness-p > p {
+      width: auto;
+      line-height: 3rem;
+      color: #fff;
+      font-family: 'Caveat Brush';
+      font-size: larger;
+    }
+
+
+/* activities page */
+
+.headings-container {
+  display: flex;
+  padding: 3rem;
+  background: linear-gradient(10deg, #9774c3, #ff9f9f);
+  flex-direction: column;
+  align-items: center;
+  border: solid 0px white;
+  box-shadow: 1px 1px 2rem rgb(0 0 0 / 30%);
+}
+
+.headings {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: white;
+  font-family: 'Carter One', cursive;
+  font-size: inherit;
+  text-align: center;
+}
+
+.number_five_card {
+  padding-top: 3rem;
+}
+
+.number_five_card_p{
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+
+/* mindfulness page */
+
+.mindfulness-top {
+  font-family: 'Carter One', cursive;
+  background: linear-gradient(10deg, #9774c3, #ff9f9f);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  margin: 2rem 1rem 2rem 1rem;
+  padding: 1rem;
+}
+
+
+.mindfulness-page-p {
+  text-align: center;
+  font-size: smaller;
+}
+
+
+.mindfulness-h1 {
+  margin-bottom: 0.25rem;
+  margin-top: auto;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  text-decoration: underline;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.breathing-exercises-header{
+  font-size: small;
+  text-align: -webkit-center;
+}
+
+.swiper {
+  width: auto;
+  margin: 1rem;
+}
+
+.slide-img {
+  width: inherit;
+}
+
+/* about page */
+
+.about-title{
+  text-align: center;
+  font-size: 2.7rem;
+}
+
+.about_p {
+  padding: 1rem;
+}
+
+.about-header-content > p {
+  text-align: justify;
+  padding: 1.5rem;
+  color: #9774c3;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-size: large;
+  line-height: 1.5rem;
+  margin: 0 auto;
+}
+
+.services-container{
+  flex-direction: column;
+}
+
+.services-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  padding-top: 0;
+  width: fit-content;
+  color: #fff;
+  font-family: 'Carter One', cursive;
+  font-size: larger;
+}
+
+.services-info > h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: larger;
+}
+
+.services-info > p {
+  font-size: larger;
+}
+
+
+/* nav */
+
+.toggle-button{
+  display: flex;
+}
+
+.nav-links{
+  display: none;
+  width: 100%;
+}
+
+.nav {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.nav__list{
+  width: 100%;
+  flex-direction: column;
+}
+
+.nav__item{
+  font-size: 1rem;
+  text-align: center;
+}
+
+.nav__link{
+  padding: 0.5rem
+}
+
+.nav__item:hover{
+  background-color: #a3cbe8;
+}
+
+.nav-links.active{
+  display: flex;
+}
+
+
+
+  }
+
+
+  @media (max-width:991px) {
+    .container__video{
+      grid-template-columns: 1.5fr 2fr;
+      padding: 10px;
+    }
+  }
+
+  @media (max-width:768px) {
+    .container__video{
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
